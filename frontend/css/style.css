@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+.auth-container {
+    width: 400px;
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h1 {
+    margin-bottom: 10px;
+}
+
+.auth-container p {
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+
+
+
+/* ========================================
+   DASHBOARD
+======================================== */
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    margin-top: 0;
+    color: #666;
+}
+
+.logout-button {
+    width: auto;
+    padding: 10px 20px;
+    background: #dc2626;
+}
+
+.logout-button:hover {
+    background: #b91c1c;
+}
+
+
+/* Statistics */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.stat-card p {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+
+/* Create task */
+
+.create-task {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.create-task input,
+.create-task textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+.create-task textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* Tasks */
+
+.tasks-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.task-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px;
+
+    margin-top: 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.task-content h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.task-content p {
+    color: #666;
+}
+
+.task-content small {
+    color: #777;
+}
+
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions button {
+    width: auto;
+    padding: 8px 14px;
+}
+
+
+.delete-confirmation {
+    margin-top: 12px;
+    padding: 10px;
+
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-confirmation span {
+    margin-right: auto;
+    font-size: 14px;
+}
+
+.confirm-delete {
+    width: auto;
+    padding: 6px 12px;
+    background: #dc2626;
+}
+
+.confirm-delete:hover {
+    background: #b91c1c;
+}
+
+.cancel-delete {
+    width: auto;
+    padding: 6px 12px;
+    background: #6b7280;
+}
+
+.cancel-delete:hover {
+    background: #4b5563;
+}
+
+
+.edit-form {
+    width: 100%;
+}
+
+.edit-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edit-title,
+.edit-description {
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.edit-description {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.edit-actions button {
+    width: auto;
+    padding: 8px 14px;
+}
+
+.edit-actions .cancel-edit {
+    background: #6b7280;
+}
+
+.edit-actions .cancel-edit:hover {
+    background: #4b5563;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Todo App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Todo Dashboard</h1>
+                <p id="userEmail">Loading user...</p>
+            </div>
+
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Create Task -->
+        <section class="create-task">
+
+            <h2>Create New Task</h2>
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Task title"
+                    required
+                >
+
+                <textarea
+                    id="taskDescription"
+                    placeholder="Task description"
+                ></textarea>
+
+                <button type="submit">
+                    Add Task
+                </button>
+
+            </form>
+
+            <p id="taskMessage"></p>
+
+        </section>
+
+
+        <!-- Tasks -->
+        <section class="tasks-section">
+
+            <div class="section-header">
+
+                <h2>My Tasks</h2>
+
+                <a href="history.html">
+                    View History
+                </a>
+
+            </div>
+
+            <div id="tasksList">
+
+                <p>Loading tasks...</p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+ <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
