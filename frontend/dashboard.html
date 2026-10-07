@@ -5,107 +5,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dashboard - Todo App</title>
+    <title>Dashboard | TaskFlow</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
-<body>
+<body class="dashboard-page">
 
     <div class="dashboard-container">
 
-        <!-- Header -->
+        <!-- ================= HEADER ================= -->
+
         <header class="dashboard-header">
 
-            <div>
-                <h1>Todo Dashboard</h1>
-                <p id="userEmail">Loading user...</p>
-            </div>
+            <a href="index.html" class="dashboard-brand">
+                <span class="dashboard-logo">✓</span>
+                <span>TaskFlow</span>
+            </a>
 
-            <button id="logoutButton" class="logout-button">
-                Logout
-            </button>
+            <div class="dashboard-user">
+
+                <div class="user-info">
+                    <span class="user-label">SIGNED IN AS</span>
+                    <span id="userEmail">Loading user...</span>
+                </div>
+
+                <button id="logoutButton" class="logout-button">
+                    Logout
+                </button>
+
+            </div>
 
         </header>
 
 
-        <!-- Statistics -->
-        <section class="stats">
+        <!-- ================= WELCOME ================= -->
 
-            <div class="stat-card">
-                <h3>Total</h3>
-                <p id="totalTasks">0</p>
-            </div>
+        <section class="dashboard-welcome">
 
-            <div class="stat-card">
-                <h3>Pending</h3>
-                <p id="pendingTasks">0</p>
-            </div>
+            <div>
+                <p class="dashboard-eyebrow">YOUR WORKSPACE</p>
 
-            <div class="stat-card">
-                <h3>Completed</h3>
-                <p id="completedTasks">0</p>
+                <h1>
+                    Get things done.
+                    <span>One task at a time.</span>
+                </h1>
+
+                <p class="welcome-text">
+                    Keep track of your work, stay organized,
+                    and focus on what matters.
+                </p>
             </div>
 
         </section>
 
 
-        <!-- Create Task -->
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon">✓</div>
+
+                <div>
+                    <span class="stat-label">TOTAL TASKS</span>
+                    <p id="totalTasks">0</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon pending-icon">◷</div>
+
+                <div>
+                    <span class="stat-label">PENDING</span>
+                    <p id="pendingTasks">0</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon completed-icon">✓</div>
+
+                <div>
+                    <span class="stat-label">COMPLETED</span>
+                    <p id="completedTasks">0</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= CREATE TASK ================= -->
+
         <section class="create-task">
 
-            <h2>Create New Task</h2>
+            <div class="create-header">
+
+                <div>
+                    <p class="section-eyebrow">NEW TASK</p>
+
+                    <h2>Create a task</h2>
+
+                    <p>
+                        Add something you want to accomplish.
+                    </p>
+                </div>
+
+                <div class="create-icon">
+                    +
+                </div>
+
+            </div>
+
 
             <form id="taskForm">
 
-                <input
-                    type="text"
-                    id="taskTitle"
-                    placeholder="Task title"
-                    required
-                >
+                <div class="task-input-row">
 
-                <textarea
-                    id="taskDescription"
-                    placeholder="Task description"
-                ></textarea>
+                    <div class="task-input-group">
 
-                <button type="submit">
-                    Add Task
-                </button>
+                        <label for="taskTitle">
+                            Task title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="taskTitle"
+                            placeholder="What needs to be done?"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="task-input-group description-input">
+
+                        <label for="taskDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="taskDescription"
+                            placeholder="Add some details..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="create-action">
+
+                    <button type="submit" class="add-task-button">
+                        <span>+</span>
+                        Add Task
+                    </button>
+
+                </div>
 
             </form>
+
 
             <p id="taskMessage"></p>
 
         </section>
 
 
-        <!-- Tasks -->
+        <!-- ================= TASKS ================= -->
+
         <section class="tasks-section">
 
             <div class="section-header">
 
-                <h2>My Tasks</h2>
+                <div>
+                    <p class="section-eyebrow">WORKSPACE</p>
 
-                <a href="history.html">
+                    <h2>My Tasks</h2>
+                </div>
+
+                <a href="history.html" class="history-link">
                     View History
+                    <span>→</span>
                 </a>
 
             </div>
 
+
             <div id="tasksList">
 
-                <p>Loading tasks...</p>
+                <p class="loading-tasks">
+                    Loading tasks...
+                </p>
 
             </div>
 
         </section>
 
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="dashboard-footer">
+
+            <span>TaskFlow</span>
+
+            <span>
+                Simple. Fast. Organized.
+            </span>
+
+        </footer>
+
     </div>
 
 
- <script src="js/dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
 
 </body>
-
 </html>

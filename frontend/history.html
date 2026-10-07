@@ -5,30 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Task History - Todo App</title>
+    <title>Task History - TaskFlow</title>
 
     <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/history.css">
 </head>
 
 <body>
 
     <div class="dashboard-container">
 
+        <!-- Header -->
         <header class="dashboard-header">
 
             <div>
+                <p class="eyebrow">TASKFLOW</p>
                 <h1>Task History</h1>
-                <p>Completed tasks</p>
+                <p class="page-subtitle">
+                    Review the tasks you've completed.
+                </p>
             </div>
 
-            <a href="dashboard.html">
-                Back to Dashboard
-            </a>
+            <div class="header-actions">
+
+                <a href="dashboard.html" class="secondary-button">
+                    ← Dashboard
+                </a>
+
+                <button id="logoutButton" class="logout-button">
+                    Logout
+                </button>
+
+            </div>
 
         </header>
 
 
-        <section class="tasks-section">
+        <!-- History -->
+        <section class="tasks-section history-section">
+
+            <div class="section-header">
+                <div>
+                    <p class="section-label">YOUR PROGRESS</p>
+                    <h2>Completed Tasks</h2>
+                </div>
+            </div>
 
             <div id="historyList">
 
@@ -40,8 +61,15 @@
 
     </div>
 
+ <script>
+        document.getElementById("logoutButton").addEventListener("click", () => {
+            localStorage.removeItem("token");
+            window.location.href = "login.html";
+        });
+    </script>
 
     <script src="js/history.js"></script>
+
 
 </body>
 
