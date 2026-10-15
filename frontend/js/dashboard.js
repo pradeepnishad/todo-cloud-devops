@@ -1,7 +1,6 @@
 // Dashboard API integration will be added here.
 const API_URL = "https://todo-cloud-devops.onrender.com";
 
-
 // ========================================
 // CHECK LOGIN
 // ========================================
